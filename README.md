@@ -25,6 +25,7 @@ Note that Address can sometimes be as vague as "Denver, CO" lacking an area code
 
 ## How to use?
 
+
 ## API Reference
 [Bikewise](www.bikewise.org)
 
