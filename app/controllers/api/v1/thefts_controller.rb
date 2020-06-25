@@ -14,20 +14,13 @@ before_action :find_theft, only: [:show, :update, :destroy]
   def create
     @theft = Theft.new(theft_params)
 
-    if @theft.save
-      render json: @theft, status: 201
-    else
-      render json: { error: 'Unable to create theft', status: 422 }
-    end
+    @theft.save
+    render json: @theft, status: 201
   end
 
   def update
-    if @theft
-      @theft.update(fact_params)
-      render json: { message: 'Theft successfully updated' }, status: 200
-    else
-      render json: { error: 'Unable to update theft' }, status: 422
-    end
+    @theft.update(fact_params)
+    render json: { message: 'Theft successfully updated' }, status: 200
   end
 
   def destroy
@@ -47,9 +40,6 @@ before_action :find_theft, only: [:show, :update, :destroy]
 
   def find_theft
     @theft = Theft.find(params[:id])
-
-    rescue ActiveRecord::RecordNotFound
-      render json: { error: 'This theft record does not exist' }, status: 404
   end
 end
 
