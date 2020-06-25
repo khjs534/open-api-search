@@ -35,7 +35,7 @@ before_action :find_theft, only: [:show, :update, :destroy]
   private
 
   def theft_params
-    params.require(:theft).permit(:title, :description)
+    params.require(:theft).permit(:title, :description, :address, :source_url, :image_url)
   end
 
   def find_theft
