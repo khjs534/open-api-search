@@ -103,6 +103,7 @@ describe "thefts", :type => :request do
       before { delete "/api/v1/thefts/#{lone_theft.id}" }
 
       it 'deletes the theft' do
+        # 21 thefts before delete
         get '/api/v1/thefts'
         expect(JSON.parse(response.body).size).to eq(20)
       end
