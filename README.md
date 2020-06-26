@@ -7,6 +7,7 @@ To practice 3rd party API integration and see if there are some cool 3rd party A
 
 ## Build status
 Deployed on Heroku
+
 The base URI is [https://sleepy-taiga-39385.herokuapp.com](https://sleepy-taiga-39385.herokuapp.com)
 
 ## Tech/framework used
@@ -54,6 +55,8 @@ To create a new theft record you MUST pass params in this format:
   }
 }
 `
+
+Use Postman to test/interface with the #create #update and #destroy routes.
 
 ## To-do
 * Add pagination for JSON served
