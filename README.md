@@ -33,9 +33,11 @@ DESTROY thefts#destroy  /api/v1/thefts/:id
 Searches are performed by hitting the thefts#index (/api/v1/thefts/?) and adding the appropriate querys "title=[SEARCH QUERY]" or  "description=[SEARCH QUERY]"
 
 For Example:
+
 `GET /api/v1/thefts/?title=Trek&description=locked`
 
 To create a new theft record you MUST pass params in this format:
+
 `
 {
   theft: {
