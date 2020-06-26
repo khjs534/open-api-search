@@ -25,10 +25,15 @@ This API re-serves the reported Denver, CO bike thefts via /api/v1/thefts/ and c
 
 ## How to use?
 GET     thefts#index    /api/v1/thefts
+
 GET     thefts#show     /api/v1/thefts/:id
+
 POST    thefts#create   /api/v1/thefts
+
 PUT     thefts#update   /api/v1/thefts/:id
+
 DESTROY thefts#destroy  /api/v1/thefts/:id
+
 
 Searches are performed by hitting the thefts#index (/api/v1/thefts/?) and adding the appropriate querys "title=[SEARCH QUERY]" or  "description=[SEARCH QUERY]"
 
