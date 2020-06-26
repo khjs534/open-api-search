@@ -12,9 +12,9 @@ The base URI is [https://sleepy-taiga-39385.herokuapp.com](https://sleepy-taiga-
 
 ## Tech/framework used
 Ruby 2.5.1
+
 Rails 6.0.3
-Rspec 3.9.0
-HTTParty
+
 
 ## Features
 This API re-serves the reported Denver, CO bike thefts via /api/v1/thefts/ and can be filtered with the following parameters:
@@ -24,6 +24,16 @@ This API re-serves the reported Denver, CO bike thefts via /api/v1/thefts/ and c
 
 ## Tests
 Written as request specs and test the status codes and functionality of the API
+
+Uses:
+
+rspec-rails
+
+faker
+
+factory_bot_rails
+
+database_cleaner
 
 ## How to use?
 GET     thefts#index    /api/v1/thefts
