@@ -33,7 +33,6 @@ For Example:
 `GET /api/v1/thefts/?title=Trek&description=locked`
 
 ## To-do
-* Write tests
 * Add pagination for JSON served
 
 ## API Reference
