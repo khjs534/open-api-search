@@ -23,6 +23,7 @@ This API re-serves the reported Denver, CO bike thefts via /api/v1/thefts/ and c
 * address
 
 ## Tests
+Written as request specs and test the status codes and functionality of the API
 
 ## How to use?
 GET     thefts#index    /api/v1/thefts
@@ -57,6 +58,22 @@ To create a new theft record you MUST pass params in this format:
 `
 
 Use Postman to test/interface with the #create #update and #destroy routes.
+
+## Operation
+If you would like to run a local copy of the repository.
+
+Clone the repo
+
+run
+
+`bundle install`
+
+`rake db:migrate`
+
+`rake db:seed`
+
+`rails s`
+
 
 ## To-do
 * Add pagination for JSON served
