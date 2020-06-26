@@ -3,6 +3,9 @@ before_action :find_theft, only: [:show, :update, :destroy]
 
   def index
     @thefts = Theft.all.order("created_at desc")
+    @thefts = @thefts.where("title LIKE ?", '%' + params[:title] + '%') if params[:title]
+    @thefts = @thefts.where("description LIKE ?", '%' + params[:description] + '%') if params[:description]
+    @thefts = @thefts.where("address LIKE ?", '%' + params[:address] + '%') if params[:address]
 
     render json: @thefts
   end
@@ -19,7 +22,7 @@ before_action :find_theft, only: [:show, :update, :destroy]
   end
 
   def update
-    @theft.update(fact_params)
+    @theft.update(theft_params)
     render json: { message: 'Theft successfully updated' }, status: 200
   end
 

@@ -15,16 +15,26 @@ Rspec 3.9.0
 HTTParty
 
 ## Features
-This API re-serves the reported Denver, CO bike thefts via v1/thefts/ and can be filtered with the following parameters:
-* id
+This API re-serves the reported Denver, CO bike thefts via /api/v1/thefts/ and can be filtered with the following parameters:
 * title
-* address
-Note that Address can sometimes be as vague as "Denver, CO" lacking an area code.
+* description
 
 ## Tests
 
 ## How to use?
+GET     thefts#index    /api/v1/thefts
+GET     thefts#show     /api/v1/thefts/:id
+POST    thefts#create   /api/v1/thefts
+PUT     thefts#update   /api/v1/thefts/:id
+DESTROY thefts#destroy  /api/v1/thefts/:id
 
+Searches are performed by hitting the thefts#index (/api/v1/thefts/?) and adding the appropriate querys "title=[SEARCH QUERY]" or  "description=[SEARCH QUERY]"
+For Example:
+`GET /api/v1/thefts/?title=Trek&description=locked`
+
+## To-do
+* Write tests
+* Add pagination for JSON served
 
 ## API Reference
 [Bikewise](www.bikewise.org)
